@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <update id="Magento_Backend::test"
+                title="Test"
+                translate="title"
+                module="Magento_Backend"
+                sortOrder="9999"
+                resource="Test_Brands::root"
+        />
+            <add id="Test_Brands::root"
+                 parent="Magento_Backend::test"
+                 title="Test brands"
+                 translate="title"
+                 module="Test_Brands"
+                 sortOrder="40"
+                 action="brands/brand/index"
+                 resource="Test_Brands::root"
+            />
+    </menu>
+</config>

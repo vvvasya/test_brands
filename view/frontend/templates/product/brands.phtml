@@ -1,0 +1,26 @@
+<?php
+
+/**
+ * @var \Test\Brands\Block\Frontend\Product\Brands $this
+ * @var \Test\Brands\Block\Frontend\Product\Brands $block
+ */
+$brands = $this->getBrands();
+$output = [];
+foreach($brands as $brand) {
+    $output[] = $brand->getName();
+}
+if (empty($output)) {
+    $output[] = __('Undefined');
+}
+
+?>
+<div class="brands attribute">
+    <strong class="type">
+        <?=__('Brands')?>:
+    </strong>
+    <div class="value">
+        <?=join(', ', $output);?>
+    </div>
+
+
+</div>
